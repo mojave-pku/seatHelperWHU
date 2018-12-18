@@ -1,0 +1,79 @@
+
+<view class="container">
+<view class="doc-title zan-hairline--bottom">余座查询</view>
+<view class="card_area" hidden='{{open_m}}'>
+      <view class="card" >
+        <view id="rev_card_inner">
+            <view class="cardTitle">
+                <view class="inner_title">
+                        <image src="/static/lock.png" class="title_icon"></image>
+                        <text class="card_title">{{title}}</text>
+                </view>
+            </view>
+        </view>
+      </view>
+    </view>
+    <view class="card_area" >
+       
+    <view hidden='{{close_m}}'>
+        <view class="card"  id="rev_card" >
+            <view id="rev_card_inner">
+                <view class="cardTitle">
+                    <view class="inner_title">
+                        <image src="/static/monS.png" class="title_icon"></image>
+                        <text class="card_title">余座查询（下拉刷新、点击预约）</text>
+                    </view>
+                </view>
+
+                <view class="card_content" >
+                    <image src="/static/clock.png" class="title_icon"></image>
+                    <picker  mode="selector" range="{{timelist}}" range-key='name'  value ="{{start}}"bindchange="startPickerChange">
+                      <view  class="picker">{{timelist[start].name}}</view>
+                    </picker>
+                    <text>~</text>
+                    <picker  mode="selector" range="{{timelist}}" range-key='name'  value ="{{end}}"bindchange="endPickerChange">
+                      <view  class="picker">{{timelist[end].name}}</view>
+                    </picker>
+                </view>
+
+                <view class="card_content" >
+                    <image src="/static/build.png" class="title_icon"></image>
+                    <picker  mode="selector" range="{{buildlist}}" range-key='name'  value ="{{build}}"bindchange="buildPickerChange">
+                      <view  class="picker">{{buildlist[build].name}}</view>
+                    </picker>
+                </view>
+
+                <view class="card_content" >
+                    <image src="/static/room.png" class="title_icon"></image>
+                    <picker  mode="selector" range="{{roomlist}}" range-key='name'  value ="{{room}}"bindchange="roomPickerChange">
+                      <view  class="picker">{{roomlist[room].name}}</view>
+                    </picker>
+                </view>
+                <view class="card_content" >
+                    <view wx:for="{{seats}}" class="seat_btn" >
+                    <form data-seatid='{{item.id}}' report-submit='true' bindsubmit="submitSeat">
+                      <button form-type='submit'  class='seat_content' plain='true' size='mini' >{{item.name}}</button>
+                      </form>
+                  </view>
+                  <view class="message_content"><text>{{message}}</text>                                                                                                                                                        </view>
+                </view>
+             </view>   
+
+            </view>
+        </view>
+        
+    </view>
+    <view scroll-y class="card_area">
+
+        <view class="card" >
+          
+          <view id="rev_card_inner">
+              <view class="cardTitle">
+                  <view class="inner_title">
+                          <text class="card_title_news">{{news}}</text>
+                  </view>
+              </view>
+          </view>
+          </view>
+        </view>
+</view>

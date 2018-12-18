@@ -1,0 +1,157 @@
+
+<view class="container">
+<view class="doc-title zan-hairline--bottom">余座监控</view>
+<view class="card_area" hidden='{{open_m}}'>
+       
+      <view class="card" >
+        <view id="rev_card_inner">
+            <view class="cardTitle">
+                <view class="inner_title">
+                        <image src="/static/lock.png" class="title_icon"></image>
+                        <text class="card_title">{{title}}</text>
+                </view>
+            </view>
+        </view>
+      </view>
+    </view>
+    <view class="card_area" >
+       
+
+    <view hidden='{{close_m}}'>
+      <view hidden='{{not_running}}'>
+        <view class="card" >
+            <view id="rev_card_inner">
+                <view class="cardTitle">
+                    <view class="inner_title">
+                            <image src="/static/running.png" class="title_icon"></image>
+                            <text class="card_title">执行状态（下拉刷新）</text>
+                    </view>
+                </view>
+                <view class="card_content" >
+                        <image src="/static/start_d.png" class="title_icon"></image>
+                        <text>监控开始时间：{{beginTime}}</text>
+                </view>
+                <view class="card_content" >
+                        <image src="/static/stop_d.png" class="title_icon"></image>
+                        <text>监控结束时间：{{stopTime}}</text>
+                </view>
+                <view class="card_content" >
+                        <image src="/static/termin.png" class="title_icon"></image>
+                        <text>预约时段：{{resTime}}</text>
+                </view>
+                <view class="card_content" >
+                        <image src="/static/flush.png" class="title_icon"></image>
+                        <text>执行次数：{{count}}</text>
+                </view>
+                <view class="card_content" >
+                        <image src="/static/warn_d.png" class="title_icon"></image>
+                        <text>若功能异常，请联系开发者</text>
+                </view>
+            </view>
+            <form report-submit='true' bindsubmit="stopDetect">
+            <view class=" ibox">
+                <button class=" zan-btn zan-btn--warn {{btn_style}}" form-type='submit'>停止监控</button>
+              </view>
+            </form>
+          </view>
+        </view>
+        <view hidden='{{running}}'>
+          <view class="card"  id="rev_card" >
+              <view id="rev_card_inner">
+                  <view class="cardTitle">
+                      <view class="inner_title">
+                          <image src="/static/detectS.png" class="title_icon"></image>
+                          <text class="card_title">余座监控（云监控）</text>
+                      </view>
+                  </view>
+
+                  <view class="card_content" >
+                    <image src="/static/tomorrowS.png" class="title_icon"></image>
+                    <text>日期：</text>
+                    <picker mode="selector" range="{{dates}}" value="{{date_value}}" range-key='name' bindchange="bindDateChange">
+                      <view class="picker">
+                      {{dates[date_value].name}}
+                      </view>
+                    </picker>
+                  </view>
+
+                  <view class="card_content" >
+                      <image src="http://prog-1251794097.costj.myqcloud.com/time.png" class="title_icon"></image>
+                      <text>预约时间：</text>
+                      <picker  mode="selector" range="{{timelist}}" range-key='name'  value ="{{start}}"bindchange="startPickerChange">
+                        <view  class="picker">{{timelist[start].name}}</view>
+                      </picker>
+                      <text>~</text>
+                      <picker  mode="selector" range="{{timelist}}" range-key='name'  value ="{{end}}"bindchange="endPickerChange">
+                        <view  class="picker">{{timelist[end].name}}</view>
+                      </picker>
+                  </view>
+
+                  
+                  <view class="card_content" >
+                    <image src="/static/termin.png" class="title_icon"></image>
+                    <text>监控时间：</text>
+                    <picker mode="time" value="{{mon_start_value}}" start="{{mon_start_start}}" end="{{mon_start_end}}" bindchange="bindStartTimeChange">
+                      <view class="picker">
+                      {{mon_start_value}}
+                      </view>
+                    </picker>
+                    <text>~</text>
+                    <picker mode="time" value="{{mon_end_value}}" start="{{mon_end_start}}" end="{{mon_end_end}}" bindchange="bindEndTimeChange">
+                      <view class="picker">
+                      {{mon_end_value}}
+                      </view>
+                    </picker>
+                  
+                  </view>
+                </view>
+
+                
+
+                <view class="card_content" >
+                    <image src="/static/build.png" class="title_icon"></image>
+                    <text>监控楼栋：</text>
+                    <picker  mode="selector" range="{{buildlist}}" range-key='name'  value ="{{build}}"bindchange="buildPickerChange">
+                      <view  class="picker">{{buildlist[build].name}}</view>
+                    </picker>
+                </view>
+               
+                <view class="card_content" >
+                     <image src="/static/room.png" class="title_icon"></image>
+                     <text style='margin-bottom: 10px;'>监控房间（不超过5个）：</text>
+                
+                    <checkbox-group bindchange="checkboxChange">
+                        <label  wx:for="{{roomlist}}">
+                          <view>
+                          <checkbox class="checkbox"value="{{item.id}}" checked="{{item.checked}}"/>{{item.name}}
+                          </view>
+                        </label>
+                      </checkbox-group>
+                </view>
+                <form report-submit='true' bindsubmit="submitDetect">
+                  <view class="ibox">
+                    <button class=" zan-btn zan-btn--primary {{btn_style}} " form-type='submit'>开始监控</button>
+                    </view>
+                  </form>
+             </view>   
+                  
+                  
+                  </view>
+            </view>
+        </view>
+
+        <view scroll-y class="card_area">
+
+        <view class="card" >
+          
+          <view id="rev_card_inner">
+              <view class="cardTitle">
+                  <view class="inner_title">
+                          <text class="card_title_news">{{news}}</text>
+                  </view>
+              </view>
+          </view>
+          </view>
+        </view>
+
+    </view>

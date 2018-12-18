@@ -1,0 +1,50 @@
+/* pages/addseat/addseat.wxss */
+.container_add{
+  background: #F9F9F9;
+  overflow: hidden;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+}
+.banner{
+    text-align: center;
+    margin: 30px;
+}
+.logo{
+    width: 50px;
+}
+.title {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 30px 0;
+}
+.userInfo{
+    text-align: center;
+    color: gray;
+    line-height: 30px;
+    font-size: x-large;
+    margin: 50px;
+}
+
+
+.item{
+  margin: 20px 0px;
+}
+
+.loginnote{
+  text-align: left;
+  color: gray;
+  font-size: medium;
+}
+
+.tips{
+    margin: 20px 0;
+}
+
+.seatinfo{
+    margin-left:15%;
+    margin-bottom: 20px;
+    line-height: 40px;
+
+}

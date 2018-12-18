@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/news/news",
+    "pages/me/me",
+    "pages/mon/mon",
+    "pages/detect/detect",
+    "pages/today/today",
+    "pages/index/index",
+    "pages/addseat/addseat",
+    "pages/access/access",
+    "pages/tomorrow/tomorrow"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F9F9F9",
+    "navigationBarTitleText": "座位助手",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#EEEEF4",
+    "enablePullDownRefresh": "true"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#1296db",
+
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "text": "主页",
+        "iconPath": "static/main.png",
+        "selectedIconPath": "static/mainS.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "当前状态",
+        "iconPath": "static/me.png",
+        "selectedIconPath": "static/meS.png"
+      },
+      {
+        "pagePath": "pages/detect/detect",
+        "text": "余座监控",
+        "iconPath": "static/detect.png",
+        "selectedIconPath": "static/detectS.png"
+      },
+      {
+        "pagePath": "pages/mon/mon",
+        "text": "余座查询",
+        "iconPath": "static/mon.png",
+        "selectedIconPath": "static/monS.png"
+      },
+      
+      {
+        "pagePath": "pages/tomorrow/tomorrow",
+        "text": "预约选座",
+        "iconPath": "static/tomorrow.png",
+        "selectedIconPath": "static/tomorrowS.png"
+      }
+    ]
+  }
+}

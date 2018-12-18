@@ -1,0 +1,36 @@
+.banner{
+    text-align: center;
+    margin: 50px;
+    font-size: x-large;
+}
+.logo{
+    width: 50px;
+}
+
+.userInfo{
+    text-align: center;
+    font-size: large;
+    color: gray;
+    line-height: 60px;
+    
+}
+.func{
+    margin: 30px;
+}
+
+.ibox{
+  margin: 20px;
+}
+
+.sw{
+    margin-left: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+
+.status_info{
+  margin: 20px;
+  line-height: 40px;
+  color: gray;
+}

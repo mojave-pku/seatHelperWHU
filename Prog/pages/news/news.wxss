@@ -1,0 +1,126 @@
+/* pages/resIndex/resIndex.wxss */
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.banner_image_outer{
+    width: 100%;
+    text-align: right;
+    height: 150px;
+    position: absolute;
+    left: 12%;
+    top: 4%;
+}
+.banner{
+    display: flex;
+    background: #17abe3;
+    flex-direction: row;
+    height: 120px;
+    width: 100%;
+    border-bottom-color: lightgray;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.userInfo{
+    text-align: center;
+    font-size: large;
+    color: gray;
+    line-height: 50px;
+    
+}
+.func{
+    margin: 30px;
+}
+
+.ibox{
+  margin: 10px;
+}
+
+.logo{
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+}
+.user{
+    flex-direction: column;
+    margin-top: 20px;
+    color: white;
+}
+.nickname{
+    font-weight: bold;
+    font-size: x-large;
+    line-height: 50px;
+
+}
+
+
+.refresh{
+    height: 20px;
+    width: 20px;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.title_icon{
+    display: flex;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+.cardTitle{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+
+
+.card_title_news{
+  justify-content: space-between;
+  word-wrap: break-word;
+  padding: 5px;
+}
+
+.card_content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#rev{
+    margin-bottom: 20px;
+}
+
+#rev_card{
+    display: flex;
+    flex-direction: column;
+}
+
+#rev_card_inner{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
+
+
+#seatinfo{
+    line-height: 30px;
+    margin-left: 20px;
+}
+
+#announce{
+    line-height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.inner_title{
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,38 @@
+<!--pages/addseat/addseat.wxml-->
+
+<view class="container_add">
+  <form bindsubmit='submit'>
+  
+    <view class="title">
+        <text>添加常用座位</text>
+    </view>
+
+    <view class="func">
+
+        <picker name="building" range="{{bulidinglist}}" range-key='name'  value="{{bulidingindex}}" bindchange="bulidingChange">
+            <view class="item">{{bulidinglist[bulidingindex].name}}</view>
+        </picker>
+
+        <picker name="room" range="{{roomlist}}" range-key='room'  value="{{roomindex}}" bindchange="roomChange">
+            <view class="item">{{roomlist[roomindex].room}}</view>
+        </picker>
+
+        <input name="seat" class="item" placeholder="座位号（3位）" maxlength="3"/>
+        
+        <text class="item">优先级：{{level}}</text>
+        <view class="item">
+            <slider name="level" min="1" max="3" step="1" value='1' bindchange='levelChange'/>
+        </view>
+
+        <button class="item" type="primary" form-type='submit'>提交</button>
+    
+    </view>
+
+  </form>  
+  <view class="tips">
+      <text class="loginnote">注意\n</text>
+      <text class="loginnote">1.最多设置3个常用座位\n</text>
+      <text class="loginnote">2.常用座位与学号绑定\n</text>
+      <text class="loginnote">3.周四下午部分区域闭馆，请尽量在常用座位中添加至少一个不闭馆区域的座位，以免耽误使用</text>
+  </view>
+</view>

@@ -1,0 +1,135 @@
+
+<view class="container">
+<view class="banner"  style="background: {{back_color}}"hover hover-class="banner_onclick" hover-stay-time="80" hover-start-time="0"bindtap="onShow">
+        <image src="{{logo}}" class="logo"></image>
+        <view class="user">
+            <text class="nickname">{{nickname}}\n</text>
+            <text >{{username}}</text>
+        </view>
+</view>
+   <view class="card_area" hidden='{{notSupport}}' bindtap='support'>
+      <button class='ibox' size='large'>点此支持作者</button>
+    </view>
+      <view scroll-y class="card_area">
+
+        <view class="card" >
+          
+          <view id="rev_card_inner">
+              <view class="cardTitle">
+                  <view class="inner_title">
+                          <text class="card_title_news">{{news}}</text>
+                  </view>
+              </view>
+          </view>
+          </view>
+        </view>
+  <view class="card_area">
+    <view class="card" id="rev_card"  >
+            <view id="rev_card_inner" >
+                <view class="cardTitle">
+                    <view class="inner_title">
+                        <image src="/static/message.png" class="title_icon"></image>
+                        <text class="card_title">向作者发送消息</text>
+                    </view>
+                    <view class="inner_title" bindtap='mess_submit'>
+                      <image src="/static/submit.png" class="title_icon" mode='aspectFill'></image>
+                  <text>提交</text>
+                    </view>
+                </view>
+                <view class="card_content">
+                <image src="/static/input.png" class="title_icon" mode='aspectFill'></image>
+                  <input placeholder='输入内容（谢绝闲聊）' bindinput='mess_change'></input>
+                 </view>
+            </view>
+          </view>
+        </view>
+
+    <view class="card_area" hidden='{{recommend_disable}}'>
+      <view class="card" id="rev_card"  >
+            <view id="rev_card_inner" >
+                <view class="cardTitle">
+                    <view class="inner_title">
+                        <image src="/static/recommend.png" class="title_icon"></image>
+                        <text class="card_title">为他人开通使用权限</text>
+                    </view>
+                    <view class="inner_title" bindtap='recommend_submit'>
+                      <image src="/static/submit.png" class="title_icon" mode='aspectFill'></image>
+                  <text>提交</text>
+                    </view>
+                </view>
+                <view class="card_content">
+                  <image src="/static/addNewUser.png" class="title_icon" mode='aspectFill'></image>
+                  <text>剩余开通次数：{{recommend}}</text>
+                </view>
+                <view class="card_content">
+                <image src="/static/input.png" class="title_icon" mode='aspectFill'></image>
+                  <input placeholder='请输入学号' bindinput='recommend_change'></input>
+                 </view>
+            </view>
+          </view>
+        </view>
+
+        
+      
+
+      
+
+        <view scroll-y class="card_area">
+          <view class="card" >
+          <view id="rev_card_inner">
+              <view class="cardTitle">
+                  <view class="inner_title">
+                          <image src="/static/server.png" class="title_icon"></image>
+                          <text class="card_title">服务器版本：{{serverVersion}}</text>
+                  </view>
+              </view>
+
+              <view class="cardTitle">
+                  <view class="inner_title">
+                          <image src="/static/prog.png" class="title_icon"></image>
+                          <text class="card_title">小程序版本：1.9.1-01.10</text>
+                  </view>
+              </view>
+          </view>
+  
+          
+    </view>
+         
+        </view> 
+        <view scroll-y class="card_area">
+          <form hidden='{{notAdmin}}' bindsubmit='changeStatus'>
+            <view class="cardTitle">
+                <view class="inner_title">
+                    <image src="/static/op.png" class="title_icon"></image>
+                    <text class="card_title">操作中心</text>
+                </view>
+              </view>
+            <view wx:for="{{configure}}" class="cardTitle">
+              <view class="card_title">
+                <switch checked='{{item.status}}' name="{{item.name}}" />
+                <text>{{item.name}}</text>
+              </view>
+            </view>
+            <view class="card_content">
+              <image src="/static/input.png" class="title_icon" mode='aspectFill'></image>
+              <input placeholder='请输入提示信息' name="message"></input>
+            </view>
+            <view class="card_content">
+              <image src="/static/input.png" class="title_icon" mode='aspectFill'></image>
+              <input placeholder='请输入小程序标题' name="title"></input>
+            </view>
+            <view class="func">
+            <button type='primary' form-type='submit'>提交</button>
+            </view>
+          </form>
+        </view>
+
+        
+        <view class="func">
+            <!-- <button class='ibox' type='warn'>打赏作者</button> -->
+            <button class="ibox" type="warn" bindtap="logout">退出登录</button>
+        </view>
+          
+    </view>
+    
+

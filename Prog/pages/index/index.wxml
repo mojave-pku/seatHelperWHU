@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<import src="/dist/field/index.wxml" />
+<view class="container">
+<view class="doc-title zan-hairline--bottom">登录</view>
+
+<form bindsubmit="checkUser">
+    <view class="zan-panel">
+      <template
+        is="zan-field"
+        data="{{ ...form.name }}"></template>
+      <template
+        is="zan-field"
+        data="{{ ...form.passwd }}"></template>
+      <view class="zan-btns">
+        <button
+          class="zan-btn zan-btn--primary {{btn_style}}"
+          formType="submit">登录</button>
+      </view>
+    </view>
+  </form>
+
+</view>

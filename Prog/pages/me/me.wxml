@@ -1,0 +1,107 @@
+
+<view class="container">
+<view class="doc-title zan-hairline--bottom">当前状态</view>
+    <view scroll-y class="card_area" hidden='{{open}}'>
+      <view class="card" >
+        <view id="rev_card_inner">
+            <view class="cardTitle">
+                <view class="inner_title">
+                        <image src="/static/lock.png" class="title_icon"></image>
+                        <text class="card_title">{{title}}</text>
+                </view>
+            </view>
+        </view>
+        </view>
+    </view>
+    
+    <view scroll-y class="card_area" hidden='{{close}}'>
+        
+
+        <view class="card" id="rev_card">
+            <view id="rev_card_inner">
+                <view class="cardTitle">
+                    <view class="inner_title">
+                        <image src="http://prog-1251794097.costj.myqcloud.com/keep.png" class="title_icon"></image>
+                        <text class="card_title">座位</text>
+                    </view>
+                    <view class="inner_title" wx:if="{{usingflag}}" hidden='{{notAdaptable}}'>
+                        <view class="detail"  bindtap="keep" >
+                            <image hidden="{{keepflag}}"src="http://prog-1251794097.costj.myqcloud.com/mod.png" class="detail_icon"></image>
+                            <text hidden="{{keepflag}}">修改时段</text>   
+                            <image hidden="{{~keepflag}}"src="http://prog-1251794097.costj.myqcloud.com/cancel.png" class="detail_icon"></image>
+                            <text hidden="{{~keepflag}}">返回</text>
+                        </view>
+                        <view class="detail"  bindtap="cancel">
+                            <image hidden="{{keepflag}}"src="http://prog-1251794097.costj.myqcloud.com/delete.png" class="detail_icon"></image>
+                            <text hidden="{{keepflag}}">取消</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="card_content" >
+                    <image src="http://prog-1251794097.costj.myqcloud.com/loc.png" class="title_icon" mode='aspectFill'></image>
+                    <text>{{using}}</text>
+                </view>
+                <view class="card_content" hidden="{{keepflag}}" wx:if="{{usingflag}}">
+                    <image src="http://prog-1251794097.costj.myqcloud.com/time.png" class="title_icon"></image>
+                    <text>{{usingtime}}</text>
+                </view>
+                
+                <view hidden="{{~keepflag}}" >
+                <view class="card_content">
+                    <image src="http://prog-1251794097.costj.myqcloud.com/add.png" mode="aspectFill" class="title_icon"></image>
+                    <view class="index_picker">
+                        <form report-submit bindsubmit="keepsubmit" class="index_form">
+                            <view class="index_picker_inner" >
+                                <view class="index_picker_text">
+                                    <text class="inner_title">从</text>
+                                    <picker  range="{{timelist}}" range-key='name'  value="{{startindex}}" bindchange="starttimePickerChange">
+                                        <view class="picker">{{timelist[startindex].name}}</view>
+                                    </picker>
+                                    <text class="inner_title">到</text>
+                                    <picker range="{{timelist}}" range-key='name'  value="{{endindex}}" bindchange="endtimePickerChange">
+                                        <view class="picker">{{timelist[endindex].name}}</view>
+                                    </picker>
+                                </view>
+                                <button  class="sub" type="default"  size="mini" form-type="submit">提交</button>
+                            </view>
+                        </form>
+                    </view>
+                </view>
+                </view>
+            </view>
+
+    
+        
+        </view>
+      </view>
+
+      <view class='card_area'>
+        <view class="card " hidden='{{close}}' >
+              <view class="cardTitle">
+                  <view class="inner_title">
+                          <image src="http://prog-1251794097.costj.myqcloud.com/%E7%8A%B6%E6%80%81.png" class="title_icon"></image>
+                          <text >{{checkedIn}}</text>
+                          <text hidden="{{ck_in}}">{{inLoc}}</text>
+                          <text hidden="{{ck_out}}">{{outTime}}</text>
+                  </view>
+              </view>
+          </view>
+      </view>
+
+
+      <view scroll-y class="card_area">
+
+        <view class="card" >
+          
+          <view id="rev_card_inner">
+              <view class="cardTitle">
+                  <view class="inner_title">
+                          <text class="card_title_news">{{news}}</text>
+                  </view>
+              </view>
+          </view>
+          </view>
+        </view>
+    </view>
+    
+

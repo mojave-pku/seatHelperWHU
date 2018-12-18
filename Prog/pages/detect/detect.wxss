@@ -1,0 +1,166 @@
+/* pages/resIndex/resIndex.wxss */
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 100%;
+}
+.banner{
+    display: flex;
+    background: #1296db;
+    flex-direction: row;
+    height: 120px;
+    width: 100%;
+    border-bottom-color: lightgray;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.checkbox{
+  margin-top: 8px;
+}
+.banner_onclick{
+    display: flex;
+    background: lightskyblue;
+    flex-direction: row;
+    height: 120px;
+    width: 100%;
+}
+.userInfo{
+    text-align: center;
+    font-size: large;
+    color: gray;
+    line-height: 50px;
+    
+}
+.func{
+    margin: 30px;
+}
+
+.ibox{
+  margin: 20px;
+}
+
+.logo{
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+}
+.user{
+    flex-direction: column;
+    margin-top: 20px;
+    color: white;
+}
+.nickname{
+    font-weight: bold;
+    font-size: x-large;
+    line-height: 50px;
+
+}
+
+
+
+
+.refresh{
+    height: 20px;
+    width: 20px;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.title_icon{
+    display: flex;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.seat_icon{
+    display: flex;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+}
+
+.cardTitle{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+
+.card_content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 30px;
+    flex-wrap: wrap;
+}
+
+.message_content{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    flex-wrap: wrap;
+}
+
+.seat_content{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-right: 15px;
+  border-color: #1296db;
+  border-width: 1px;
+  border-style: solid;
+}
+.seat_btn{
+  display: flex;
+}
+.seat_content_hover{
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  padding: 5px;
+  border-color: #1296db;
+  border-width: 1px;
+  border-style: solid;
+}
+.seat_area{
+  display: flex;
+  flex-direction: row;
+}
+.seat_num{
+  margin: 2px;
+}
+#rev{
+    margin-bottom: 20px;
+}
+
+#rev_card{
+    display: flex;
+    flex-direction: column;
+}
+
+#rev_card_inner{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
+
+
+#seatinfo{
+    line-height: 30px;
+    margin-left: 20px;
+}
+
+#announce{
+    line-height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.inner_title{
+    display: flex;
+    flex-direction: row;
+}

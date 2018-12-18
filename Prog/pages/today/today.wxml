@@ -1,0 +1,76 @@
+
+<view class="container">
+   <view class="doc-title zan-hairline--bottom">即时选座</view>
+    <view class="card_area" hidden='{{open}}'>
+      <view class="card" >
+        <view id="rev_card_inner">
+            <view class="cardTitle">
+                <view class="inner_title">
+                        <image src="/static/lock.png" class="title_icon"></image>
+                        <text class="card_title">{{title}}</text>
+                </view>
+            </view>
+        </view>
+      </view>
+    </view>
+    <view class="card_area" hidden='{{close}}'>
+        
+        <view class="card" >
+            <view class="cardTitle">
+                <view class="inner_title">
+                        <image src="/static/now.png" class="title_icon"></image>
+                        <text class="card_title">即时选座</text>
+                </view>
+            </view>
+            <view id="card_area">
+
+                <view class="card_content" >
+                    <image src="/static/start.png" class="title_icon"></image>
+                    <text>开始时间： {{start}}</text>
+                </view>
+                <view class="card_content" >
+                    <image src="/static/end.png" class="title_icon"></image>
+                    <text>结束时间：</text>
+                    <picker  mode="selector" range="{{timelist}}" range-key='name'  value ="{{end}}"bindchange="endPickerChange">
+                      <view  class="picker">{{timelist[end].name}}</view>
+                    </picker>
+                </view>
+
+                <view class="card_content" >
+                    <image src="/static/build.png" class="title_icon"></image>
+                    <text>场馆：</text>
+                    <picker  mode="selector" range="{{buildlist}}" range-key='name'  value ="{{build}}"bindchange="buildPickerChange">
+                      <view  class="picker">{{buildlist[build].name}}</view>
+                    </picker>
+                </view>
+
+                <view class="card_content" >
+                    <image src="/static/room.png" class="title_icon"></image>
+                    <text>房间：</text>
+                    <picker  mode="selector" range="{{roomlist}}" range-key='name'  value ="{{room}}"bindchange="roomPickerChange">
+                      <view  class="picker">{{roomlist[room].name}}</view>
+                    </picker>
+                </view>
+
+                <view class="card_content" >
+                    <image src="/static/seat.png" class="title_icon"></image>
+                    <text>可用座位：</text>
+                    <picker  mode="selector" range="{{seatlist}}" range-key='name'  value ="{{seat}}"bindchange="seatPickerChange">
+                      <view  class="picker">{{seatlist[seat].name}}</view>
+                    </picker>
+                </view>
+                <form report-submit='true' bindsubmit='submit'>
+                  <view class="content_btn" >
+                      <button type='primary' form-type='submit'>提交</button>
+                  </view>
+                </form>
+                
+
+            </view>
+            
+        </view>
+        
+
+    </view>
+    
+</view>

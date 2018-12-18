@@ -1,0 +1,132 @@
+
+
+<view class="container">
+    <view class="doc-title zan-hairline--bottom">预约选座</view>
+    
+    <view class='card_area' hidden='{{open}}'> 
+      <view class="card" >
+        <view id="rev_card_inner">
+            <view class="cardTitle">
+                <view class="inner_title">
+                        <image src="/static/lock.png" class="title_icon"></image>
+                        <text class="card_title">{{title}}</text>
+                </view>
+            </view>
+        </view>
+        </view>
+    </view>
+
+   
+
+
+    <view class="card_area" >
+       
+        <view class="card" id="rev_card" >
+            <view id="rev_card_inner">
+                <view class="cardTitle">
+                    <view class="inner_title">
+                        <image src="http://prog-1251794097.costj.myqcloud.com/book.png" class="title_icon"></image>
+                        <text class="card_title">预约</text>
+                    </view>
+                    <view hidden='{{close}}'>
+                    <view class="inner_title" hidden="{{navbookflag}}">
+                        <view class="detail"  bindtap="book">
+                            <image hidden="{{bookretflag}}"src="http://prog-1251794097.costj.myqcloud.com/mod.png" class="detail_icon"></image>
+                            <text hidden="{{bookretflag}}">修改</text>   
+                            <image hidden="{{~bookretflag}}"src="http://prog-1251794097.costj.myqcloud.com/cancel.png" class="detail_icon"></image>
+                            <text hidden="{{~bookretflag}}">返回</text>
+                        </view>
+                        <view class="detail"  bindtap="deletenextday">
+                            <image hidden="{{bookretflag}}"src="http://prog-1251794097.costj.myqcloud.com/delete.png" class="detail_icon"></image>
+                            <text hidden="{{bookretflag}}">取消</text>
+                        </view>
+                    </view>
+                    <view class="inner_title" hidden="{{bookflag}}">
+                        <view class="detail"  bindtap="book">
+                            <image hidden="{{bookretflag}}"src="http://prog-1251794097.costj.myqcloud.com/add.png" class="detail_icon"></image>
+                            <text hidden="{{bookretflag}}">添加</text>   
+                            <image hidden="{{~bookretflag}}"src="http://prog-1251794097.costj.myqcloud.com/cancel.png" class="detail_icon"></image>
+                            <text hidden="{{~bookretflag}}">返回</text>
+                        </view>
+                    </view>
+                    </view>
+                </view>
+                <view class="card_content">
+                    <image src="http://prog-1251794097.costj.myqcloud.com/time.png" class="title_icon"></image>
+                    <text>{{seat}}</text>
+                </view>
+
+                <view hidden="{{~bookretflag}}" >
+                <view class="card_content">
+                    <image src="http://prog-1251794097.costj.myqcloud.com/add.png" mode="aspectFill" class="title_icon"></image>
+                    <view class="index_picker">
+                        <form report-submit bindsubmit="booksubmit" class="index_form">
+                            <view class="index_picker_inner" >
+                                <view class="index_picker_text">
+                                    <text class="inner_title">从</text>
+                                    <picker  range="{{timelist}}" range-key='name'  value="{{startindex}}" bindchange="starttimePickerChange">
+                                        <view class="picker">{{timelist[startindex].name}}</view>
+                                    </picker>
+                                    <text class="inner_title">到</text>
+                                    <picker range="{{timelist}}" range-key='name'  value="{{endindex}}" bindchange="endtimePickerChange">
+                                        <view class="picker">{{timelist[endindex].name}}</view>
+                                    </picker>
+                                </view>
+                                <button  class="sub" type="default"  size="mini" form-type="submit">提交</button>
+                            </view>
+                        </form>
+                    </view>
+                </view>
+                </view>
+
+            </view>
+        </view>
+        </view>
+        <view class="card_area" >
+        <view class="card" id="rev_card">
+            <view id="rev_card_inner">
+                <view class="cardTitle">
+                    <view class="inner_title">
+                        <image src="http://prog-1251794097.costj.myqcloud.com/seat.png" class="title_icon"></image>
+                        <text class="card_title">常用座位</text>
+                    </view>
+                    <view class="inner_title">
+                    <view hidden='{{close}}'>
+                        <view class="detail"  bindtap="addseat">
+                            <image src="http://prog-1251794097.costj.myqcloud.com/mod.png" class="detail_icon"></image>
+                            <text >修改</text>   
+                        </view>
+                    </view>
+                    </view>
+                </view>
+                <view class="card_content">
+                  <image src="/static/1.png" class="title_icon" mode='aspectFill'></image>
+                  <text>{{seat1}}</text>
+                </view>
+                <view class="card_content">
+                  <image src="/static/2.png" class="title_icon" mode='aspectFill'></image>
+                  <text>{{seat2}}</text>
+                </view>
+                <view class="card_content">
+                  <image src="/static/3.png" class="title_icon" mode='aspectFill'></image>
+                  <text>{{seat3}}</text>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+     <view scroll-y class="card_area">
+
+        <view class="card" >
+          
+          <view id="rev_card_inner">
+              <view class="cardTitle">
+                  <view class="inner_title">
+                          <text class="card_title_news">{{news}}</text>
+                  </view>
+              </view>
+          </view>
+          </view>
+        </view>
+    
+</view>

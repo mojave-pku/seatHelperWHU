@@ -1,0 +1,65 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.5.4",
+	"appid": "wx3c1ed4db3c5b089b",
+	"projectname": "%E8%87%AA%E4%B9%A0%E5%8A%A9%E6%89%8B",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "预约选座",
+					"pathName": "pages/tomorrow/tomorrow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "即时选座",
+					"pathName": "pages/today/today",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "余座查询",
+					"pathName": "pages/mon/mon",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "余座监控",
+					"pathName": "pages/detect/detect",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "添加座位",
+					"pathName": "pages/addseat/addseat",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "当前状态",
+					"pathName": "pages/me/me",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,43 @@
+/**index.wxss**/
+
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 30px 0;
+}
+
+.usermotto {
+  margin-top: 50px;
+  margin-left: 20%;
+}
+
+.loginnote{
+  text-align: left;
+  color: gray;
+  font-size: medium;
+}
+
+.logininfo{
+  margin-top: 25px;
+  
+}
+
+.ibox{
+  margin: 20px;
+}
+.metto{
+  text-align: center;
+  margin-bottom: 70px;
+
+}
+.welcome{
+  font-size: xx-large;
+  text-align: center;
+  width: 100%;
+}
+

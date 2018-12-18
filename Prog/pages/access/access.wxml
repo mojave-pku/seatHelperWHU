@@ -1,0 +1,16 @@
+<view class="banner">
+    <text>使用申请</text>
+</view>
+<form report-submit bindsubmit="submit">
+<view class="logininfo"> 
+    <input class="ibox" name="studentnum" placeholder="正在获取学号" disabled value="{{studentnum}}" />
+    <input class="ibox" name="name" placeholder="正在获取姓名" disabled value="{{name}}" />
+    <input class="ibox" name="reason" placeholder="申请理由（可选）" />
+</view>
+
+
+<view class="func">
+    <button class="ibox" type="primary" form-type="submit">提交申请</button>
+ </view>
+
+ </form>

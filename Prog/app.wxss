@@ -1,0 +1,160 @@
+/**app.wxss**/
+@import "dist/index.wxss";
+
+.container {
+  background: #F9F9F9;
+  overflow: hidden;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0px 0;
+  width: 100%;
+}
+.container::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: ' ';
+  width: 100%;
+  height: 1rpx;
+  /* background-color: #e2e2e2; */
+  z-index: 5;
+}
+.card_area{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    background-color: white;
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px lightgray;
+}
+
+.doc-title {
+  position: relative;
+  padding: 15px 0;
+  margin: 10px 15px;
+  line-height: 25px;
+  font-size: 25px;
+  color: #666;
+}
+.doc-description {
+  margin: 14px 0;
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+}
+
+.tableBlock{
+  display: flex;
+  flex-direction: row;
+}
+
+.tableInput{
+  margin: 15px 0;
+}
+
+.tableTitle{
+  margin: 15px 15px 15px 0;
+}
+
+
+.my_button{
+  display: flex;
+  height: 20px;
+  width: 100px;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
+
+.my_button_onclick{
+  display: flex;
+  height: 20px;
+  width: 100px;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  background-color: lightblue;
+  
+}
+
+.button_area{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    justify-content: space-around  ;
+}
+
+.detail{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20px;
+}
+
+.detail_icon{
+    width: 22px;
+    height: 22px;  
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+}
+.page_title{
+  font-size: 40px;
+  padding: 10px;
+}
+.card_onclick{
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    border: 1px solid lightgray;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+}
+
+.index_picker{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  line-height: 25px;
+
+}
+
+.index_picker_inner{
+  display: flex;
+  justify-content: space-between;
+}
+
+.picker{
+  display: flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: underline;
+}
+
+.sub{
+  display: flex;
+  margin-left: 75px;
+}
+
+.index_form{
+  display: flex;
+  justify-content: space-between;
+}
+.index_picker_text{
+  display: flex;
+}
